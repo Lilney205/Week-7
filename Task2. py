@@ -1,0 +1,11 @@
+import matplotlib.pyplot as plt
+
+# Line chart showing trends over time (example: 'date' vs 'sales')
+data_cleaned['date'] = pd.to_datetime(data_cleaned['date'])  # Ensure 'date' column is in datetime format
+plt.figure(figsize=(10, 6))
+plt.plot(data_cleaned['date'], data_cleaned['sales'], color='blue')
+plt.title('Sales Trend Over Time')
+plt.xlabel('Date')
+plt.ylabel('Sales')
+plt.grid(True)
+plt.show()
