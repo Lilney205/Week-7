@@ -1,0 +1,7 @@
+Additional Notes:
+
+Plot Customization: Customize your plots further by adding labels, changing colors, and using styles to make them visually appealing. You can use plt.style.use('seaborn') to apply seaborn’s styling.
+
+Error Handling: Ensure that you handle errors gracefully, especially when dealing with missing files or malformed data. Use try-except blocks where needed.
+
+Interpretation: After generating the plots, analyze the trends or patterns and provide insights. For example, you may notice that sales peak during certain months, or there may be a strong correlation between sales and profits.
