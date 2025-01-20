@@ -1,0 +1,53 @@
+
+#linechart
+
+import matplotlib.pyplot as plt
+
+# Line chart showing trends over time (example: 'date' vs 'sales')
+data_cleaned['date'] = pd.to_datetime(data_cleaned['date'])  # Ensure 'date' column is in datetime format
+plt.figure(figsize=(10, 6))
+plt.plot(data_cleaned['date'], data_cleaned['sales'], color='blue')
+plt.title('Sales Trend Over Time')
+plt.xlabel('Date')
+plt.ylabel('Sales')
+plt.grid(True)
+plt.show()
+
+
+
+
+#barchart
+import seaborn as sns
+
+# Bar chart showing the comparison of a numerical value across categories (e.g., 'average sales per region')
+plt.figure(figsize=(10, 6))
+sns.barplot(x=grouped_data.index, y=grouped_data.values, palette='viridis')
+plt.title('Average Sales per Region')
+plt.xlabel('Region')
+plt.ylabel('Average Sales')
+plt.show()
+
+
+
+
+#histogram
+# Histogram of a numerical column to understand its distribution (e.g., 'sales')
+plt.figure(figsize=(10, 6))
+plt.hist(data_cleaned['sales'], bins=20, color='green', edgecolor='black')
+plt.title('Sales Distribution')
+plt.xlabel('Sales')
+plt.ylabel('Frequency')
+plt.show()
+
+
+
+
+#scatter plot
+
+# Scatter plot to visualize the relationship between two numerical columns (e.g., 'sales' vs 'profit')
+plt.figure(figsize=(10, 6))
+plt.scatter(data_cleaned['sales'], data_cleaned['profit'], color='red')
+plt.title('Sales vs Profit')
+plt.xlabel('Sales')
+plt.ylabel('Profit')
+plt.show()
